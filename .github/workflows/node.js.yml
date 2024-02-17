@@ -28,12 +28,13 @@
                 with:
                   node-version: ${{ matrix.node-version }}
 
+              - run: npm i
+
               - name: Start MongoDB
                 uses: supercharge/mongodb-github-action@v1
                 with:
                   mongodb_version: ${{ matrix.mongodb-version }}
                   mongodb-port: 4000
-
-              - run: npm i
+                  
               - run: npm run start
               - run: npm test
