@@ -35,6 +35,5 @@
                 with:
                   mongodb_version: ${{ matrix.mongodb-version }}
                   mongodb-port: 4000
-                  
-              - run: npm run start
+
               - run: npm test
